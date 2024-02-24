@@ -1,0 +1,28 @@
+###list users
+
+curl --location 'localhost:8080/users'
+
+### create user
+
+curl --location 'localhost:8080/users' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name":"jaswan",
+    "email":"jj@gmail.com"
+}'
+
+### update user
+curl --location --request PUT 'localhost:8080/users/1' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name":"jaswan2",
+    "email":"jj@gmail.com"
+}'
+
+### delte user
+curl --location --request DELETE 'localhost:8080/users/1' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name":"jaswan2",
+    "email":"jj@gmail.com"
+}'
